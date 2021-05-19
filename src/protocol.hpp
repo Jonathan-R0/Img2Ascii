@@ -1,9 +1,9 @@
-#ifndef PROTOCOL_H_
-#define PROTOCOL_H_
+#ifndef __PROTOCOL_HPP__
+#define __PROTOCOL_HPP__
 
-#include "log.h"
+#include "log.hpp"
 
 #define LOG_WITH_ID(Y) LOG((Y + std::to_string(id)).c_str())
 #define LOG(ERROR) Log::log(__FILE__, __FUNCTION__, __LINE__, ERROR);
 
-#endif
+#endif  // __PROTOCOL_HPP__

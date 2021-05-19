@@ -1,5 +1,5 @@
-#ifndef __SDL_SURFACE_H__
-#define __SDL_SURFACE_H__
+#ifndef __SDL_SURFACE_HPP__
+#define __SDL_SURFACE_HPP__
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -19,8 +19,6 @@ class SdlSurface {
     ~SdlSurface();
     void getSizes(int* w, int* h);
     SDL_Color getPixelColor(const int x, const int y);
-    SdlSurface(const SdlSurface&) = delete;
-    SdlSurface& operator=(const SdlSurface&) = delete;
 };
 
-#endif  // __SDL_SURFACE_H__
+#endif  // __SDL_SURFACE_HPP__

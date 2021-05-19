@@ -1,5 +1,5 @@
-#ifndef LOG_H_
-#define LOG_H_
+#ifndef __LOG_HPP__
+#define __LOG_HPP__
 
 #include <mutex>
 
@@ -23,4 +23,4 @@ class Log {
   static std::mutex lock;
 };
 
-#endif  // LOG_H_
+#endif  // __LOG_HPP__

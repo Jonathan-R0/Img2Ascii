@@ -6,10 +6,12 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
 
 add_library(img2ascii
   src/sdlsurface.cpp
-  src/sdlsurface.h
-  src/log.h
+  src/sdlsurface.hpp
+  src/log.hpp
   src/log.cpp
-  src/protocol.h
+  src/asciifier.hpp
+  src/asciifier.cpp
+  src/protocol.hpp
 )
 
 # Agrego la carpeta con los headers autogenerados a los includes

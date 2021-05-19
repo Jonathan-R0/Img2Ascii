@@ -1,5 +1,5 @@
-#include "sdlsurface.h"
-#include "log.h"
+#include "sdlsurface.hpp"
+#include "log.hpp"
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -8,7 +8,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <string>
 
-#include "protocol.h"
+#include "protocol.hpp"
 
 SdlSurface::SdlSurface(const char* imgpath) :
     surface(IMG_Load(imgpath)) {
