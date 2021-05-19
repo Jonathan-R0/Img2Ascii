@@ -6,6 +6,7 @@
 Asciifier::Asciifier(const char* imgpath) :
 	surface(SdlSurface(imgpath)) {
     surface.getSizes(&this->w, &this->h);
+    this->art.reserve(this->w * this->h / 150);
 }
 
 void Asciifier::run() {
