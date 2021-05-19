@@ -10,10 +10,12 @@
 
 #include "protocol.h"
 
-SdlSurface::SdlSurface(const std::string& imgpath) :
-    surface(IMG_Load(std::string(IMG_PATH + imgpath).c_str())) {
+SdlSurface::SdlSurface(const char* imgpath) :
+    surface(IMG_Load(imgpath)) {
     if (!this->surface) {
-        LOG(std::string("Could not open file " + imgpath).c_str());
+        std::string error = "Could not open file ";
+        error += imgpath;
+        LOG(error.c_str());
     }
     this->w = this->surface->w;
     this->h = this->surface->h;
@@ -30,10 +32,9 @@ SdlSurface::~SdlSurface() {
 SDL_Color SdlSurface::getPixelColor(const int x, const int y) {
 	const Uint8 bpp = this->surface->format->BytesPerPixel;
 	Uint8* pixel = (Uint8*)this->surface->pixels + y * this->surface->pitch + x * bpp;
-	Uint32 pixelData = *(Uint32*)pixel;
-	SDL_Color Color = {0x00, 0x00, 0x00, SDL_ALPHA_OPAQUE};
-	SDL_GetRGB(pixelData, this->surface->format, &Color.r, &Color.g, &Color.b);
-	return Color;
+	SDL_Color color = {0x00, 0x00, 0x00, SDL_ALPHA_OPAQUE};
+	SDL_GetRGB(*(Uint32*)pixel, this->surface->format, &color.r, &color.g, &color.b);
+	return color;
 }
 
 void SdlSurface::getSizes(int* w, int* h) {

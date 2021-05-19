@@ -28,4 +28,11 @@ You can save it to a file like this:
 ./exec [PATH/2/IMG] > art.txt
 ```
 
-<div align="right">Turn images to ascii art. May or may not work lol</div>
+## Want to see some examples?
+
+No.
+
+## If you change your mind you can check out the output folder.
+
+<div align="right">Turn images to ascii art.</div>
+<div align="right">May or may not work lol.</div>

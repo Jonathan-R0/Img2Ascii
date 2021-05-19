@@ -14,7 +14,7 @@ class SdlSurface {
     int w,h;
 
   public:
-    SdlSurface(const std::string& imgpath);
+    SdlSurface(const char* imgpath);
     SdlSurface(SdlSurface&& other);
     ~SdlSurface();
     void getSizes(int* w, int* h);
