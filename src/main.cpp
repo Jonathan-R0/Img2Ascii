@@ -8,9 +8,10 @@
 #include "protocol.h"
 #include "sdlsurface.h"
 
-char values[] = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
 
 int main(int argc, char* argv[]) {
+
+    char values[] = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
 
     if (argc != 2) {
         printf("No image given.\n");
