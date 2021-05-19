@@ -22,17 +22,17 @@ int main(int argc, char* argv[]) {
     int w, h;
     surface.getSizes(&w, &h);
 
-    std::cout << w << " " << h << std::endl;
-
     std::string art = "";
     SDL_Color color;
+
+    int factor = 255/sizeof(values);
 
     for (int i = 0; i < h; i += h/100) {
         for (int j = 0; j < w; j += w/200) {
             color = surface.getPixelColor(j,i);
             // 0 <= brightness <= 255
             float b = 0.299 * color.r + 0.587 * color.g + 0.114 * color.b;
-            art += values[int(b/3)];
+            art += values[int(b/factor)];
         }
         art += "\n";
     }

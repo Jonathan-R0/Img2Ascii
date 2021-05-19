@@ -19,6 +19,8 @@ class SdlSurface {
     ~SdlSurface();
     void getSizes(int* w, int* h);
     SDL_Color getPixelColor(const int x, const int y);
+    SdlSurface(const SdlSurface&) = delete;
+    SdlSurface& operator=(const SdlSurface&) = delete;
 };
 
 #endif  // __SDL_SURFACE_H__
