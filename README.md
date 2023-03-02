@@ -28,7 +28,7 @@ You can save it to a file like this:
 ./exec [PATH/2/IMG] > art.txt
 ```
 
-## Wanna to see some examples?
+## Wanna see some examples?
 
 No.
 
